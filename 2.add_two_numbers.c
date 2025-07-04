@@ -3,7 +3,7 @@
 #include <conio.h>
 
 int main(){
-    int a,c,b;
+    int a,c,b; // defining variables (int -> intiger, char ->)
     printf("Enter the value of a : ");
     scanf("%d",&a);
     printf("Enter the value of b : ");

@@ -3,7 +3,7 @@
 #include <conio.h> // console input output
 
 int main(){
-    printf("Edwin Sanjo Soji");
+    printf("Edwin Sanjo Soji"); // a function to print text onto the console
     return 0;
 }
 
