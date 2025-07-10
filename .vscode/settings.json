@@ -1,5 +1,7 @@
 {
     "files.associations": {
-        "17~2.C": "cpp"
+        "17~2.C": "cpp",
+        "26.ARRAYS.C": "cpp",
+        "26.average_height_array.C": "cpp"
     }
 }
