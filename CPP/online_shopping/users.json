@@ -1,0 +1,26 @@
+[
+    {
+        "email": "asd",
+        "id": 41937,
+        "name": "saf",
+        "password": "asd",
+        "phoneno": "dadfa",
+        "type": "admin"
+    },
+    {
+        "email": "asf",
+        "id": 11027,
+        "name": ".",
+        "password": "asdf",
+        "phoneno": "sadf",
+        "type": "user"
+    },
+    {
+        "email": "asdf",
+        "id": 42438,
+        "name": "daf",
+        "password": "daf",
+        "phoneno": "daf",
+        "type": "user"
+    }
+]

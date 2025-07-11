@@ -11,13 +11,15 @@ class bus_info {
              void getdata(int bno, string btype, int x);
              void putdata();
 };
+
 void bus_info::getdata(int bno, string btype, int x){
      bus_id = bno;
      bus_type=btype;
      n=x;
 }
+
 void bus_info::putdata(){
-     cout << bus_id << bus_type << n;     
+     cout << bus_id << bus_type << n;
 }
 
 int main() {
