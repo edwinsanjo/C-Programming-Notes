@@ -55,6 +55,12 @@ json Auth::Authenticate()
     cout << "1. Login\n2. SignUp\n3.exit\n" << endl;
     while (true){
         cin >> i;
+           if (cin.fail()) {
+        cin.clear(); 
+        cin.ignore(10, '\n'); 
+        cout << "Invalid input! Please Try again.\n";
+        continue;
+    }
         if (i == 1)
         {
             return login();
@@ -83,12 +89,11 @@ json Auth::login()
         cin >> email;
 
         json data = ReadFromFile();
-        for (json& user : data)
-        {
-            if (user.contains("email") && user["email"] == email)
+        for (int i = 0; i < data.size(); ++i) {
+            if (data[i].contains("email") && data[i]["email"] == email)
             {
                 userFound = true;
-                useri=user;
+                useri=data[i];
                 break;
             }
         }
@@ -138,12 +143,11 @@ json Auth::signup()
         {"type","user"}
         };
     json data = ReadFromFile();
-    for (json& user : data)
-        {
-            if ((user.contains("email") && user["email"] == email) ||
-                (user.contains("phoneno") && user["phoneno"] == phoneno) ||
-                (user.contains("id") && user["id"] == id))
-            {
+    for (int i = 0; i < data.size(); ++i) {
+        if ((data[i].contains("id")&&data[i]["id"] == id)||
+            (data[i].contains("email")&&data[i]["email"] == email)||
+            (data[i].contains("phoneno")&&data[i]["phoneno"] == phoneno)) {
+    
                 cout << "email or phone number not available" << endl;
                 userExist=true;
                 break;

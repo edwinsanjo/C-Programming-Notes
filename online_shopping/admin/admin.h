@@ -6,6 +6,7 @@
 #include <fstream>
 #include "../json.hpp"
 #include "./userMenu.h"
+#include "./productMenu.h"
 
 
 using json = nlohmann::json;
@@ -16,8 +17,8 @@ class Admin
     void EditUser();
     void DeleteUser();
     void userMenu();
-    void productsMenu();
-    void ordersMenu();
+    // void productsMenu();
+    // void ordersMenu();
 
 public:
     void Menu();
@@ -27,6 +28,7 @@ void Admin::Menu()
 {
     int i;
     UserMenu usermenu;
+    ProductMenu productmenu;
     while (true)
     {
         cout << endl;
@@ -39,6 +41,7 @@ void Admin::Menu()
         }
         else if (i == 2)
         {
+            productmenu.productMenu();
         }
         else if (i == 3)
         {

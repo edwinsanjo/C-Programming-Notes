@@ -40,10 +40,16 @@ void UserMenu::userMenu()
         cout << endl;
         cout << "\n1. View Users\n2.Add Users\n3.Edit User\n4.Delete User\n5.Go Back\n";
         cin >> i;
+        if (cin.fail()) {
+        cin.clear(); 
+        cin.ignore(10000, '\n'); 
+        cout << "Invalid input! Please Try again.\n";
+        continue;
+    }
         if (i == 1)
         {
-            for (json &user : readFromUsers())
-                cout << user << endl;
+            json data = readFromUsers();
+            for (int i = 0; i < data.size(); ++i) cout << data[i] << endl;
         }
         else if (i == 2)
         {
@@ -73,29 +79,29 @@ void UserMenu::userMenu()
 void UserMenu::EditUser() {
     json data = readFromUsers();
     int id;
-    cout << "✏️ Enter user ID to edit: ";
+    cout << "Enter user ID to edit: ";
     cin >> id;
-
+    
     bool found = false;
 
-    for (json& user : data) {
-        if (user["id"] == id) {
+    for (int i = 0; i < data.size(); ++i) {
+        if (data[i]["id"] == id) {
             found = true;
-            cout << "👤 Editing user with ID: " << id << endl;
+            cout << "Editing user with ID: " << id << endl;
 
             string newName, newEmail;
-            cout << "Current Name: " << user["name"] << "\n";
+            cout << "Current Name: " << data[i]["name"] << endl;
             cout << "Enter new name (leave blank to keep current): ";
             cin.ignore();
             getline(cin, newName);
 
-            cout << "Current Email: " << user["email"] << "\n";
-            cout << "Enter new email (leave blank to keep current): ";
+            cout << "Current Email: " << data[i]["email"] << endl;
+            cout << "Enter new email : ";
+            cin.ignore();
             getline(cin, newEmail);
 
-            // Update only if non-empty input
-            if (!newName.empty()) user["name"] = newName;
-            if (!newEmail.empty()) user["email"] = newEmail;
+            if (!newName.empty()) data[i]["name"] = newName;
+            if (!newEmail.empty()) data[i]["email"] = newEmail;
 
             string confirm;
             cout << "Confirm changes? (y/n): ";
@@ -115,7 +121,7 @@ void UserMenu::EditUser() {
     }
 
     if (!found) {
-        cout << "❌ User not found.\n";
+        cout << " User not found.\n";
     }
 }
 
@@ -129,15 +135,15 @@ void UserMenu::DeleteUser()
     bool found = false;
     json updatedUsers = json::array();
 
-    for (json &user : data)
+    for (int i = 0; i < data.size(); ++i)
     {
-        if (user["id"] == id)
+        if (data[i]["id"] == id)
         {
             found = true; 
         }
         else
         {
-            updatedUsers.push_back(user); 
+            updatedUsers.push_back(data[i]); 
         }
     }
 
