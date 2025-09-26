@@ -22,5 +22,13 @@
         "password": "daf",
         "phoneno": "daf",
         "type": "user"
+    },
+    {
+        "email": "himanshu@gmail.com",
+        "id": 35676,
+        "name": "himanshu",
+        "password": "himanshu",
+        "phoneno": "341234123",
+        "type": "user"
     }
 ]

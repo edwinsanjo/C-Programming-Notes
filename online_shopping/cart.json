@@ -1,0 +1,22 @@
+[
+    {
+        "id": 31070,
+        "products": [
+            {
+                "description": "his is a very  phone",
+                "id": 11821,
+                "name": "iphone 1",
+                "price": "42524",
+                "rating": "425243"
+            }
+        ],
+        "user": {
+            "email": "edwinsanjo1212@gmail.com",
+            "id": 42438,
+            "name": "edwin sanjo",
+            "password": "daf",
+            "phoneno": "daf",
+            "type": "user"
+        }
+    }
+]

@@ -10,7 +10,7 @@ int main() {
     return 0;
 }
 
-void printline(char ch='*', int n=10) {
+void printline(char ch='*', int n=10) { // adding default varibles in a function declaration itself
 int i;
 for(i=0;i<n;i++){
     cout << ch;

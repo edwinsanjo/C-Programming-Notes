@@ -1,6 +1,4 @@
 #include <iostream>
-#include <stdio.h>
-#include <conio.h>
 
 using namespace std;
 class bus_info {
@@ -26,6 +24,5 @@ int main() {
  bus_info x;
  x.getdata(1,"AC",1);
  x.putdata();
- getch();
  return 0;    
 }

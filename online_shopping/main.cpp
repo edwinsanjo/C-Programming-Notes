@@ -12,7 +12,7 @@ int main() {
         json usrDetails = auth.Authenticate();
          if (usrDetails["type"] == "user"){
             User user;
-            user.Menu();
+            user.Menu(usrDetails);
         }else if (usrDetails["type"] == "admin") {
             Admin admin;
             admin.Menu();

@@ -1,1 +1,74 @@
-{}
+[
+    {
+        "email": "asd",
+        "id": 41937,
+        "name": "saf",
+        "password": "asd",
+        "phoneno": "dadfa",
+        "type": "admin"
+    },
+    {
+        "email": "asf",
+        "id": 11027,
+        "name": ".",
+        "password": "asdf",
+        "phoneno": "sadf",
+        "type": "user"
+    },
+    {
+        "email": "edwinsanjo1212@gmail.com",
+        "id": 42438,
+        "name": "edwin sanjo",
+        "password": "daf",
+        "phoneno": "daf",
+        "type": "user"
+    },
+    {
+        "email": "himanshu@gmail.com",
+        "id": 35676,
+        "name": "himanshu",
+        "password": "himanshu",
+        "phoneno": "341234123",
+        "type": "user"
+    },
+    {
+        "id": 31070,
+        "products": [
+            {
+                "description": "his is a very  phone",
+                "id": 11821,
+                "name": "iphone 1",
+                "price": "42524",
+                "rating": "425243"
+            }
+        ],
+        "user": {
+            "email": "edwinsanjo1212@gmail.com",
+            "id": 42438,
+            "name": "edwin sanjo",
+            "password": "daf",
+            "phoneno": "daf",
+            "type": "user"
+        }
+    },
+    {
+        "id": 31070,
+        "products": [
+            {
+                "description": "his is a very  phone",
+                "id": 11821,
+                "name": "iphone 1",
+                "price": "42524",
+                "rating": "425243"
+            }
+        ],
+        "user": {
+            "email": "edwinsanjo1212@gmail.com",
+            "id": 42438,
+            "name": "edwin sanjo",
+            "password": "daf",
+            "phoneno": "daf",
+            "type": "user"
+        }
+    }
+]

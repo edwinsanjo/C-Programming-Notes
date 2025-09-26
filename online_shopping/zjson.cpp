@@ -49,7 +49,7 @@ void createProduct() {
 
     data.push_back(newProduct);
     writeToFile(data);
-    cout << "✅ Product added.\n";
+    cout << "Product added.\n";
 }
 
 // Read (Display all products)
